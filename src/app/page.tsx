@@ -41,6 +41,7 @@ export default function LandingPage() {
               <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1rem', color: 'var(--color-text)' }}>College Track</span>
             </div>
             <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+              <a href="#platform" className="nav-link" style={{ color: 'var(--color-text-soft)', textDecoration: 'none', fontSize: '0.875rem', fontWeight: 500 }}>What We Do</a>
               <a href="#portfolios" className="nav-link" style={{ color: 'var(--color-text-soft)', textDecoration: 'none', fontSize: '0.875rem', fontWeight: 500 }}>Student Portfolios</a>
             </div>
           </div>
@@ -49,24 +50,54 @@ export default function LandingPage() {
         {/* ── Hero ── */}
         <section style={{ paddingTop: '140px', paddingBottom: '80px', paddingLeft: '2rem', paddingRight: '2rem', textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}>
           <div style={{ display: 'inline-block', background: 'rgba(108,99,255,0.12)', border: '1px solid rgba(108,99,255,0.3)', borderRadius: '100px', padding: '6px 16px', marginBottom: '2rem' }}>
-            <span style={{ fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#9B96FF' }}>UAE Student Portfolio Platform — Demo</span>
+            <span style={{ fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#9B96FF' }}>College Track · UAE Admissions Platform — Demo</span>
           </div>
           <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.03em', color: 'var(--color-text)', marginBottom: '1.5rem' }}>
             Every student has a story.{' '}
             <span style={{ background: 'linear-gradient(135deg, #6C63FF, #4ECDC4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>We help schools tell it.</span>
           </h1>
-          <p style={{ fontSize: '1.1rem', lineHeight: 1.75, color: 'var(--color-text-soft)', maxWidth: '600px', margin: '0 auto 2.5rem' }}>
-            A verified student portfolio — every project, activity, and achievement, teacher-verified. Built for schools in the UAE and beyond.
+          <p style={{ fontSize: '1.1rem', lineHeight: 1.75, color: 'var(--color-text-soft)', maxWidth: '620px', margin: '0 auto 2.5rem' }}>
+            College Track turns everyday gradebook marks into a defensible college strategy — verified portfolios, an alignment engine that scores every student against every college, and AI-written reports. Built for schools in the UAE and beyond.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="#portfolios" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #6C63FF, #5a52e0)', color: '#fff', textDecoration: 'none', padding: '0.875rem 1.75rem', borderRadius: '10px', fontWeight: 600, fontSize: '0.9rem', boxShadow: '0 0 40px rgba(108,99,255,0.25)' }}>
-              View Student Portfolios →
+            <a href="#platform" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #6C63FF, #5a52e0)', color: '#fff', textDecoration: 'none', padding: '0.875rem 1.75rem', borderRadius: '10px', fontWeight: 600, fontSize: '0.9rem', boxShadow: '0 0 40px rgba(108,99,255,0.25)' }}>
+              See what College Track does →
+            </a>
+            <a href="#portfolios" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', color: 'var(--color-text)', textDecoration: 'none', padding: '0.875rem 1.75rem', borderRadius: '10px', fontWeight: 600, fontSize: '0.9rem' }}>
+              View student portfolios →
             </a>
           </div>
         </section>
 
+        {/* ── What College Track does (primary feature) ── */}
+        <section id="platform" style={{ borderTop: '1px solid rgba(255,255,255,0.06)', padding: '70px 2rem 90px', background: 'rgba(108,99,255,0.025)', scrollMarginTop: '64px' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+              <p style={{ fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#9B96FF', marginBottom: '0.75rem' }}>What College Track does</p>
+              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.75rem, 3.5vw, 2.6rem)', fontWeight: 800, color: 'var(--color-text)', letterSpacing: '-0.02em' }}>From the gradebook to the college offer — one intelligent chain</h2>
+              <p style={{ fontSize: '1rem', lineHeight: 1.7, color: 'var(--color-text-soft)', maxWidth: '640px', margin: '1.1rem auto 0' }}>
+                College Track turns everyday gradebook marks into a defensible college strategy — every percentage carries an exact GPA value, every trend becomes points, and every student gets one computed verdict per college, with the receipt permanently open.
+              </p>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem' }}>
+              {PLATFORM_FEATURES.map(f => (
+                <div key={f.title} className="feature-card" style={{ padding: '1.75rem 1.5rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '16px' }}>
+                  <div style={{ fontSize: '1.9rem', marginBottom: '0.85rem' }}>{f.icon}</div>
+                  <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem', fontWeight: 700, color: 'var(--color-text)', marginBottom: '0.5rem' }}>{f.title}</h3>
+                  <p style={{ fontSize: '0.86rem', lineHeight: 1.6, color: 'var(--color-text-soft)' }}>{f.description}</p>
+                </div>
+              ))}
+            </div>
+            <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+              <a href="#portfolios" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)', color: 'var(--color-text)', textDecoration: 'none', padding: '0.875rem 2rem', borderRadius: '10px', fontWeight: 600, fontSize: '0.9rem' }}>
+                See it on real student portfolios →
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* ── Student Profiles ── */}
-        <section id="portfolios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem 80px', scrollMarginTop: '80px' }}>
+        <section id="portfolios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '70px 2rem 80px', scrollMarginTop: '80px' }}>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <p style={{ fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--color-muted)', marginBottom: '0.75rem' }}>Live Student Portfolios</p>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: 700, color: 'var(--color-text)', letterSpacing: '-0.02em' }}>See what students are building</h2>
@@ -124,33 +155,6 @@ export default function LandingPage() {
                 </article>
               </Link>
             ))}
-          </div>
-        </section>
-
-        {/* ── Platform Features ── */}
-        <section style={{ borderTop: '1px solid rgba(255,255,255,0.06)', padding: '80px 2rem', background: 'rgba(255,255,255,0.012)' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-              <p style={{ fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--color-muted)', marginBottom: '0.75rem' }}>What College Track does</p>
-              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: 700, color: 'var(--color-text)', letterSpacing: '-0.02em' }}>From the gradebook to the college offer — one intelligent chain</h2>
-              <p style={{ fontSize: '0.95rem', lineHeight: 1.7, color: 'var(--color-text-soft)', maxWidth: '620px', margin: '1rem auto 0' }}>
-                College Track turns everyday gradebook marks into a defensible college strategy — every percentage carries an exact GPA value, every trend becomes points, and every student gets one computed verdict per college, with the receipt permanently open.
-              </p>
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem' }}>
-              {PLATFORM_FEATURES.map(f => (
-                <div key={f.title} className="feature-card" style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '16px' }}>
-                  <div style={{ fontSize: '1.75rem', marginBottom: '0.75rem' }}>{f.icon}</div>
-                  <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, color: 'var(--color-text)', marginBottom: '0.5rem' }}>{f.title}</h3>
-                  <p style={{ fontSize: '0.84rem', lineHeight: 1.6, color: 'var(--color-text-soft)' }}>{f.description}</p>
-                </div>
-              ))}
-            </div>
-            <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-              <a href="#portfolios" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #6C63FF, #5a52e0)', color: '#fff', textDecoration: 'none', padding: '0.875rem 2rem', borderRadius: '10px', fontWeight: 600, fontSize: '0.9rem' }}>
-                View student portfolios →
-              </a>
-            </div>
           </div>
         </section>
 
