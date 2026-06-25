@@ -29,7 +29,7 @@ export function DevSwitcher({ currentSlug }: { currentSlug: string }) {
         ← All Portfolios
       </Link>
       <span style={{ fontSize: '0.65rem', color: 'var(--color-muted)', opacity: 0.3, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
-        PortfolioOS · UAE Demo
+        College Track · UAE Demo
       </span>
     </div>
   );

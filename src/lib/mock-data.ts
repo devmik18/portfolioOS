@@ -283,7 +283,7 @@ export const mockVolunteerVerificationContext: VolunteerVerificationContext = {
 
 // ─── UAE Student — Omar Al-Rashidi ────────────────────────────────────────────
 export const mockPortfolioUAE: PublicPortfolio = {
-  slug: 'omara_gemswdxb',
+  slug: 'omara_meridiandxb',
   visibility: 'PUBLIC',
   moduleVisibility: { ...DEFAULT_MODULE_VISIBILITY },
   isPasswordProtected: false,
@@ -329,7 +329,7 @@ export const mockPortfolioUAE: PublicPortfolio = {
   ],
 
   ecas: [
-    { id: 'eca-uae-1', portfolioId: 'port-omara', academicYear: '2024-25', name: 'Model Arab League', category: 'DEBATE', role: 'Secretary-General', hoursPerWeek: 5, weeksActive: 30, totalHours: 150, description: 'Led 300-delegate regional conference hosted at GEMS Wellington.', achievements: 'Outstanding Delegation Award, Emirates MAL 2025.', isVisible: true, softSkillDomains: ['Leadership', 'Communication', 'Teamwork & Collaboration', 'Professionalism & Character'] },
+    { id: 'eca-uae-1', portfolioId: 'port-omara', academicYear: '2024-25', name: 'Model Arab League', category: 'DEBATE', role: 'Secretary-General', hoursPerWeek: 5, weeksActive: 30, totalHours: 150, description: 'Led 300-delegate regional conference hosted at a partner school in Dubai.', achievements: 'Outstanding Delegation Award, Emirates MAL 2025.', isVisible: true, softSkillDomains: ['Leadership', 'Communication', 'Teamwork & Collaboration', 'Professionalism & Character'] },
     { id: 'eca-uae-2', portfolioId: 'port-omara', academicYear: '2024-25', name: 'Robotics Club', category: 'STEM', role: 'Lead Engineer', hoursPerWeek: 4, weeksActive: 28, totalHours: 112, description: 'Designed autonomous navigation system for FLL regional competition robot.', achievements: 'Regional Champions — UAE FLL 2024.', isVisible: true, softSkillDomains: ['Digital & Technical Literacy', 'Critical Thinking', 'Teamwork & Collaboration'] },
     { id: 'eca-uae-3', portfolioId: 'port-omara', academicYear: '2023-24', name: 'Community Iftar Initiative', category: 'COMMUNITY', role: 'Organiser', hoursPerWeek: 3, weeksActive: 4, totalHours: 48, description: 'Organised nightly community Iftar meals serving 200+ people during Ramadan in collaboration with local mosques.', achievements: 'Recognised by Dubai Municipality Social Impact Award.', isVisible: true, softSkillDomains: ['Professionalism & Character', 'Teamwork & Collaboration', 'Communication'] },
   ],
@@ -613,7 +613,7 @@ export const mockPortfolioGCSE: PublicPortfolio = {
   ecas: [
     { id: 'eca-gcse-1', portfolioId: 'port-mayab', academicYear: '2024-25', name: 'Kings\' School Arts Council', category: 'ARTS', role: 'Chair', hoursPerWeek: 4, weeksActive: 32, totalHours: 128, description: 'Led a 14-member arts council organising 3 school exhibitions, securing a visiting artist residency, and launching a student arts magazine.', achievements: 'School arts magazine reached 500+ readers across 4 schools in its first term.', isVisible: true, softSkillDomains: ['Leadership', 'Creativity & Innovation', 'Communication', 'Teamwork & Collaboration'] },
     { id: 'eca-gcse-2', portfolioId: 'port-mayab', academicYear: '2024-25', name: 'Duke of Edinburgh Gold — Expedition', category: 'OTHER', role: 'Participant', hoursPerWeek: 3, weeksActive: 24, totalHours: 72, description: 'Completing DofE Gold award: skill (textiles), volunteering (coastal clean-up), physical (swimming), and a 4-day qualifying expedition in Oman.', achievements: 'Qualifying expedition completed — Hajar Mountains, February 2025.', isVisible: true, softSkillDomains: ['Resilience & Growth Mindset', 'Professionalism & Character'] },
-    { id: 'eca-gcse-3', portfolioId: 'port-mayab', academicYear: '2023-24', name: 'Eco Action Team', category: 'COMMUNITY', role: 'Co-Founder', hoursPerWeek: 2, weeksActive: 36, totalHours: 72, description: 'Co-founded school sustainability team. Led a single-use plastic audit across the school canteen, resulting in 3 policy changes adopted by the school.', achievements: 'School plastic audit cited in GEMS sustainability network report.', isVisible: true, softSkillDomains: ['Leadership', 'Critical Thinking', 'Professionalism & Character'] },
+    { id: 'eca-gcse-3', portfolioId: 'port-mayab', academicYear: '2023-24', name: 'Eco Action Team', category: 'COMMUNITY', role: 'Co-Founder', hoursPerWeek: 2, weeksActive: 36, totalHours: 72, description: 'Co-founded school sustainability team. Led a single-use plastic audit across the school canteen, resulting in 3 policy changes adopted by the school.', achievements: 'School plastic audit cited in a regional school sustainability network report.', isVisible: true, softSkillDomains: ['Leadership', 'Critical Thinking', 'Professionalism & Character'] },
     { id: 'eca-gcse-4', portfolioId: 'port-mayab', academicYear: '2023-24', name: 'LAMDA Acting', category: 'ARTS', role: 'Student', hoursPerWeek: 2, weeksActive: 30, totalHours: 60, description: 'Graded acting examinations through LAMDA (London Academy of Music & Dramatic Art).', achievements: 'LAMDA Grade 8 Acting — Distinction.', isVisible: true, softSkillDomains: ['Communication', 'Resilience & Growth Mindset'] },
   ],
 

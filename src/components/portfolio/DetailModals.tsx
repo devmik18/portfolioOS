@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useCallback } from 'react';
-import { X, ExternalLink, Star, Clock, Calendar, ChevronRight } from 'lucide-react';
+import { X, ExternalLink, Star, Clock, Calendar } from 'lucide-react';
 import { VerifiedChip } from '@/components/ui/VerifiedChip';
 import type { PortfolioProject, EcaEntry } from '@/lib/types';
 
@@ -297,17 +297,6 @@ export function EcaModal({ eca, onClose }: { eca: EcaEntry; onClose: () => void 
             </div>
           )}
 
-          {/* Trailblazer connection hint */}
-          <div style={{ marginTop: '1.5rem', padding: '1rem 1.25rem', background: 'rgba(108,99,255,0.07)', border: '1px solid rgba(108,99,255,0.15)', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-            <span style={{ fontSize: '1.1rem' }}>🎯</span>
-            <div>
-              <p style={{ fontSize: '0.78rem', fontWeight: 600, color: '#9B96FF', marginBottom: '0.15rem' }}>Trailblazer Connection</p>
-              <p style={{ fontSize: '0.75rem', color: 'var(--color-muted)', lineHeight: 1.5 }}>
-                Skills from this activity contribute toward Trailblazer programme eligibility — verified by a teacher or coach.
-              </p>
-            </div>
-            <ChevronRight size={14} style={{ color: '#9B96FF', flexShrink: 0 }} />
-          </div>
         </div>
       </div>
     </>

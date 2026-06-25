@@ -20,7 +20,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: { template: '%s | Portfolio', default: 'Student Portfolio' },
+  title: { template: '%s | College Track', default: 'College Track — Student Portfolios' },
   description: 'A verified record of academic achievement, projects, and personal growth.',
 };
 

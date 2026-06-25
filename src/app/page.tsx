@@ -2,15 +2,15 @@
 import Link from 'next/link';
 import { allPortfolios } from '@/lib/mock-data';
 
-const FEATURED = ['alexm_safahbs', 'omara_gemswdxb'] as const;
+const FEATURED = ['alexm_safahbs', 'omara_meridiandxb', 'mayab_kcsdxb'] as const;
 
 const PLATFORM_FEATURES = [
-  { icon: '🎯', title: 'Trailblazer & ECA Management', description: 'Skill-gated elective selection and in-school enrichment programme coordination — from sign-up to completion.' },
   { icon: '📊', title: 'Verified Portfolio', description: 'Every project, activity, and achievement is teacher-verified. A living record that grows with each student across their school career.' },
+  { icon: '🎯', title: 'ECA & Activity Tracking', description: 'Every extracurricular captured with hours, roles, and skill-domain mapping — a complete picture of life beyond the classroom.' },
   { icon: '🔬', title: 'Skill Tracking', description: 'Eight-domain skill framework with evidence-based progression. Teachers validate; students own the narrative.' },
   { icon: '👨‍👩‍👧', title: 'Parent & Student Dashboard', description: 'Real-time visibility into academic progress, skill development, and upcoming opportunities — for families and students alike.' },
-  { icon: '🤖', title: 'AI-Powered Reporting', description: 'Automatic narrative summaries and recommendations for Trailblazer and ECA selection — reducing admin, surfacing insight.' },
-  { icon: '💳', title: 'Payments (Optional)', description: 'Integrated fee collection for enrichment programmes, trips, and optional activities — no third-party tools needed.' },
+  { icon: '🤖', title: 'AI-Powered Reporting', description: 'Automatic narrative summaries and recommendations drawn from verified portfolio data — reducing admin, surfacing insight.' },
+  { icon: '💳', title: 'Payments (Optional)', description: 'Integrated fee collection for trips and optional activities — no third-party tools needed.' },
 ];
 
 export default function LandingPage() {
@@ -37,12 +37,11 @@ export default function LandingPage() {
         <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50, background: 'rgba(10,11,15,0.88)', backdropFilter: 'blur(16px)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '64px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-              <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: 'linear-gradient(135deg, #6C63FF, #4ECDC4)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#fff', fontSize: '15px' }}>P</div>
-              <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1rem', color: 'var(--color-text)' }}>PortfolioOS</span>
+              <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: 'linear-gradient(135deg, #6C63FF, #4ECDC4)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#fff', fontSize: '13px', letterSpacing: '-0.02em' }}>CT</div>
+              <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1rem', color: 'var(--color-text)' }}>College Track</span>
             </div>
             <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-              <Link href="/trailblazer" className="nav-link" style={{ color: 'var(--color-text-soft)', textDecoration: 'none', fontSize: '0.875rem', fontWeight: 500 }}>Trailblazer &amp; ECAs</Link>
-              <Link href="/platform" className="nav-link" style={{ color: 'var(--color-text-soft)', textDecoration: 'none', fontSize: '0.875rem', fontWeight: 500 }}>Platform</Link>
+              <a href="#portfolios" className="nav-link" style={{ color: 'var(--color-text-soft)', textDecoration: 'none', fontSize: '0.875rem', fontWeight: 500 }}>Student Portfolios</a>
             </div>
           </div>
         </nav>
@@ -57,20 +56,17 @@ export default function LandingPage() {
             <span style={{ background: 'linear-gradient(135deg, #6C63FF, #4ECDC4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>We help schools tell it.</span>
           </h1>
           <p style={{ fontSize: '1.1rem', lineHeight: 1.75, color: 'var(--color-text-soft)', maxWidth: '600px', margin: '0 auto 2.5rem' }}>
-            A verified skills portfolio, ECA tracking system, and Trailblazer elective platform — built for international schools in the UAE and beyond.
+            A verified student portfolio — every project, activity, and achievement, teacher-verified. Built for schools in the UAE and beyond.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/trailblazer" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #6C63FF, #5a52e0)', color: '#fff', textDecoration: 'none', padding: '0.875rem 1.75rem', borderRadius: '10px', fontWeight: 600, fontSize: '0.9rem', boxShadow: '0 0 40px rgba(108,99,255,0.25)' }}>
-              Explore Trailblazer →
-            </Link>
-            <Link href="/platform" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', color: 'var(--color-text)', textDecoration: 'none', padding: '0.875rem 1.75rem', borderRadius: '10px', fontWeight: 600, fontSize: '0.9rem' }}>
-              View Full Platform
-            </Link>
+            <a href="#portfolios" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #6C63FF, #5a52e0)', color: '#fff', textDecoration: 'none', padding: '0.875rem 1.75rem', borderRadius: '10px', fontWeight: 600, fontSize: '0.9rem', boxShadow: '0 0 40px rgba(108,99,255,0.25)' }}>
+              View Student Portfolios →
+            </a>
           </div>
         </section>
 
         {/* ── Student Profiles ── */}
-        <section style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem 80px' }}>
+        <section id="portfolios" style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem 80px', scrollMarginTop: '80px' }}>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <p style={{ fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--color-muted)', marginBottom: '0.75rem' }}>Live Student Portfolios</p>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: 700, color: 'var(--color-text)', letterSpacing: '-0.02em' }}>See what students are building</h2>
@@ -148,16 +144,16 @@ export default function LandingPage() {
               ))}
             </div>
             <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-              <Link href="/platform" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #6C63FF, #5a52e0)', color: '#fff', textDecoration: 'none', padding: '0.875rem 2rem', borderRadius: '10px', fontWeight: 600, fontSize: '0.9rem' }}>
-                Explore the full platform →
-              </Link>
+              <a href="#portfolios" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #6C63FF, #5a52e0)', color: '#fff', textDecoration: 'none', padding: '0.875rem 2rem', borderRadius: '10px', fontWeight: 600, fontSize: '0.9rem' }}>
+                View student portfolios →
+              </a>
             </div>
           </div>
         </section>
 
         {/* ── Footer ── */}
         <footer style={{ borderTop: '1px solid rgba(255,255,255,0.06)', padding: '2rem', textAlign: 'center' }}>
-          <p style={{ fontSize: '0.72rem', color: 'var(--color-muted)', opacity: 0.4, letterSpacing: '0.12em', textTransform: 'uppercase' }}>PortfolioOS · UAE School Demo · Confidential</p>
+          <p style={{ fontSize: '0.72rem', color: 'var(--color-muted)', opacity: 0.4, letterSpacing: '0.12em', textTransform: 'uppercase' }}>College Track · UAE Student Portfolio Demo · Confidential</p>
         </footer>
       </main>
     </>
