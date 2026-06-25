@@ -5,12 +5,12 @@ import { allPortfolios } from '@/lib/mock-data';
 const FEATURED = ['alexm_safahbs', 'omara_meridiandxb', 'mayab_kcsdxb'] as const;
 
 const PLATFORM_FEATURES = [
-  { icon: '📊', title: 'Verified Portfolio', description: 'Every project, activity, and achievement is teacher-verified. A living record that grows with each student across their school career.' },
-  { icon: '🎯', title: 'ECA & Activity Tracking', description: 'Every extracurricular captured with hours, roles, and skill-domain mapping — a complete picture of life beyond the classroom.' },
-  { icon: '🔬', title: 'Skill Tracking', description: 'Eight-domain skill framework with evidence-based progression. Teachers validate; students own the narrative.' },
-  { icon: '👨‍👩‍👧', title: 'Parent & Student Dashboard', description: 'Real-time visibility into academic progress, skill development, and upcoming opportunities — for families and students alike.' },
-  { icon: '🤖', title: 'AI-Powered Reporting', description: 'Automatic narrative summaries and recommendations drawn from verified portfolio data — reducing admin, surfacing insight.' },
-  { icon: '💳', title: 'Payments (Optional)', description: 'Integrated fee collection for trips and optional activities — no third-party tools needed.' },
+  { icon: '🎓', title: 'College Alignment Engine', description: 'Every student scored against every college across eight weighted dimensions — Strong Likely to Reach — with the receipt behind each number always open.' },
+  { icon: '📈', title: 'Trajectory Engine', description: 'Grades 9–10 tracked by GPA level and slope, not just averages — surfacing who is on-track long before applications open.' },
+  { icon: '🧭', title: 'Cohort Admissions View', description: "Every student's college list, major fit, and risk on one screen — the counsellor's single-screen verdict across the whole cohort." },
+  { icon: '📊', title: 'Academic Profile & Rigour', description: 'GPA, SAT superscore, and AP course rigour audited like a balance sheet — the verified inputs the engine consumes.' },
+  { icon: '📝', title: 'AI Report Writer', description: 'Counsellor reports and voice feedback drafted straight from real gradebook data — minutes, not hours, with a teacher in the loop.' },
+  { icon: '🪪', title: 'Portfolio Studio', description: "Turns a student's verified evidence into a publishable, university-facing portfolio — scored against their intended major." },
 ];
 
 export default function LandingPage() {
@@ -131,8 +131,11 @@ export default function LandingPage() {
         <section style={{ borderTop: '1px solid rgba(255,255,255,0.06)', padding: '80px 2rem', background: 'rgba(255,255,255,0.012)' }}>
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-              <p style={{ fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--color-muted)', marginBottom: '0.75rem' }}>What we build</p>
-              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: 700, color: 'var(--color-text)', letterSpacing: '-0.02em' }}>A complete ecosystem for student development</h2>
+              <p style={{ fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--color-muted)', marginBottom: '0.75rem' }}>What College Track does</p>
+              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: 700, color: 'var(--color-text)', letterSpacing: '-0.02em' }}>From the gradebook to the college offer — one intelligent chain</h2>
+              <p style={{ fontSize: '0.95rem', lineHeight: 1.7, color: 'var(--color-text-soft)', maxWidth: '620px', margin: '1rem auto 0' }}>
+                College Track turns everyday gradebook marks into a defensible college strategy — every percentage carries an exact GPA value, every trend becomes points, and every student gets one computed verdict per college, with the receipt permanently open.
+              </p>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem' }}>
               {PLATFORM_FEATURES.map(f => (
